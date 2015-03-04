@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"3684 D:\Programs\Microchip\xc8\v1.33\include\pic16f886.h
+"3684 D:\Windows Programs\Microchip\xc8\v1.33\include\pic16f886.h
 [v _RC1 `Vb ~T0 @X0 0 e@57 ]
 "3682
 [v _RC0 `Vb ~T0 @X0 0 e@56 ]
@@ -12,11 +12,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "3686
 [v _RC2 `Vb ~T0 @X0 0 e@58 ]
 [v F1552 `(v ~T0 @X0 1 tf1`ul ]
-"154 D:\Programs\Microchip\xc8\v1.33\include\pic.h
+"154 D:\Windows Programs\Microchip\xc8\v1.33\include\pic.h
 [v __delay `JF1552 ~T0 @X0 0 e ]
 [p i __delay ]
 [p mainexit ]
-"1659 D:\Programs\Microchip\xc8\v1.33\include\pic16f886.h
+"1659 D:\Windows Programs\Microchip\xc8\v1.33\include\pic16f886.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@143 ]
 "1421
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
@@ -25,7 +25,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic16f886.h: 47: extern volatile unsigned char INDF @ 0x000;
-"49 D:\Programs\Microchip\xc8\v1.33\include\pic16f886.h
+"49 D:\Windows Programs\Microchip\xc8\v1.33\include\pic16f886.h
 [; ;pic16f886.h: 49: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic16f886.h: 53: extern volatile unsigned char TMR0 @ 0x001;
@@ -1936,30 +1936,42 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 58: Lcd_Clear();
 "58
 [e ( _Lcd_Clear ..  ]
-[; ;main.c: 59: Lcd_Set_Cursor(1,4);
+[; ;main.c: 59: Lcd_Set_Cursor(1,1);
 "59
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 4 `i `uc ]
-[; ;main.c: 60: Lcd_Write_String("StjerneIdioten");
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 60: Lcd_Write_String("Hej Mads");
 "60
 [e ( _Lcd_Write_String (1 -> :s 1C `*uc ]
-[; ;main.c: 62: while(1) {
+[; ;main.c: 61: Lcd_Set_Cursor(2,1);
+"61
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 62: Lcd_Write_String("Hej Kost");
 "62
+[e ( _Lcd_Write_String (1 -> :s 2C `*uc ]
+[; ;main.c: 64: while(1) {
+"64
 [e :U 166 ]
 {
-"64
+[; ;main.c: 65: Lcd_Shift_Right();
+"65
+[e ( _Lcd_Shift_Right ..  ]
+[; ;main.c: 66: _delay((unsigned long)((500)*(8000000/4000.0)));
+"66
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"67
 }
 [e :U 165 ]
-"62
+"64
 [e $U 166  ]
 [e :U 167 ]
-[; ;main.c: 64: }
-[; ;main.c: 65: return (0);
-"65
+[; ;main.c: 67: }
+[; ;main.c: 68: return (0);
+"68
 [e ) -> 0 `i ]
 [e $UE 164  ]
-[; ;main.c: 66: }
-"66
+[; ;main.c: 69: }
+"69
 [e :UE 164 ]
 }
-[a 1C 83 116 106 101 114 110 101 73 100 105 111 116 101 110 0 ]
-
+[a 2C 72 101 106 32 75 111 115 116 0 ]
+[a 1C 72 101 106 32 77 97 100 115 0 ]

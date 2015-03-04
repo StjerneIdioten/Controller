@@ -56,11 +56,14 @@ int main(int argc, char** argv) {
 
     Lcd_Init();
     Lcd_Clear();
-    Lcd_Set_Cursor(1,4);
-    Lcd_Write_String("StjerneIdioten");
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Hej Mads");
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("Hej Kost");
 
     while(1) {
-        
+    Lcd_Shift_Right();
+    __delay_ms(500);
     }
     return (EXIT_SUCCESS);
 }
